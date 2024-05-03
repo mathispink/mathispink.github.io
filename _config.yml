@@ -120,7 +120,7 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : MathisPink&twitter
+  username               : &twitter
 facebook:
   username               : #
   app_id                 : #
