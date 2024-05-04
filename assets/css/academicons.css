@@ -569,3 +569,9 @@ border-radius: .1em;
 .ai-inverse {
   color: #fff;
 }
+
+/* Your Custom Styles */
+.ai {
+  font-size: 20px;   /* Adjust the size as desired */
+  color: #FF00FF;    /* Use your preferred color - this is magenta */
+}
