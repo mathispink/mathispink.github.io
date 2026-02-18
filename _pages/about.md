@@ -7,7 +7,8 @@ redirect_from:
   - /about.html
 ---
 
-I am a PhD student in computer science at the [Max Planck Institute for Software Systems](https://www.mpi-sws.org/), affiliated with the research training group ["Neuroexplicit Models of Language, Vision, and Action"](https://www.neuroexplicit.org/). I am advised by [Mariya Toneva](https://mtoneva.com/) and [Isabel Valera](https://ivaleram.github.io/) at [Saarland University](https://www.uni-saarland.de/start.html).
+I am a PhD student in computer science at the [Max Planck Institute for Software Systems](https://www.mpi-sws.org/), working on enabling episodic memory for LLMs.
+I am affiliated with the research training group ["Neuroexplicit Models of Language, Vision, and Action"](https://www.neuroexplicit.org/) and advised by [Mariya Toneva](https://mtoneva.com/) and [Isabel Valera](https://ivaleram.github.io/) at [Saarland University](https://www.uni-saarland.de/start.html).
 
 My research studies long-term memory in large language models and the design of more efficient memory architectures. In particular, I focus on episodic memory mechanisms as an alternative to expensive long-context processing. I am broadly interested in foundational principles of modular intelligent systems that apply to both biological and artificial cognition.
 
