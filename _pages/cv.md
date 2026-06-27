@@ -17,7 +17,7 @@ April 2020 - December 2023
 
 **Thesis:** *Learning Where to Look in Natural Visual Scenes*
 
-### B.A. in Phillosophy & Economics — GPA 1.41 (3.6/4.0)
+### B.A. in Philosophy & Economics — GPA 1.41 (3.6/4.0)
 **University of Bremen, Germany**  
 October 2015 - April 2020
 
