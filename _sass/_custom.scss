@@ -13,9 +13,9 @@
   --ink-faint: #777d87;
   --line: #dcdad3;
   --line-dark: #c7c4bb;
-  --accent: #2f568e;
-  --accent-dark: #1f3e6b;
-  --accent-soft: #edf1f6;
+  --accent: #a63d6f;
+  --accent-dark: #7d2d52;
+  --accent-soft: #f6e9ef;
   --warm: #6b5b48;
   --radius: 12px;
   --shadow: 0 12px 30px rgba(25, 29, 40, 0.06);
@@ -32,6 +32,7 @@ html {
 }
 
 body {
+  margin-bottom: 0 !important;
   min-height: 100vh;
   margin: 0;
   padding-top: 72px;
@@ -45,13 +46,13 @@ body {
 }
 
 ::selection {
-  background: #cfd9ff;
-  color: #11131a;
+  background: #f1cedd;
+  color: #25131c;
 }
 
 a {
   color: var(--accent);
-  text-decoration-color: rgba(49, 89, 198, 0.32);
+  text-decoration-color: rgba(166, 61, 111, 0.32);
   text-decoration-thickness: 1px;
   text-underline-offset: 0.16em;
 }
@@ -108,9 +109,7 @@ h6 {
 
 .greedy-nav .visible-links {
   display: flex;
-  width: 100%;
   align-items: center;
-  margin-left: auto;
 }
 
 .greedy-nav .visible-links a,
@@ -291,11 +290,21 @@ h6 {
 .home-hero {
   position: relative;
   display: grid;
-  grid-template-columns: minmax(0, 1.55fr) minmax(220px, 0.45fr);
+  grid-template-columns: minmax(200px, 0.42fr) minmax(0, 1.58fr);
   gap: clamp(40px, 6vw, 76px);
   align-items: center;
   min-height: 500px;
   padding: 48px 0 68px;
+}
+
+.home-hero__portrait {
+  grid-column: 1;
+  grid-row: 1;
+}
+
+.home-hero__copy {
+  grid-column: 2;
+  grid-row: 1;
 }
 
 .home-hero::after {
@@ -345,7 +354,7 @@ h6 {
 }
 
 .home-hero__portrait {
-  justify-self: end;
+  justify-self: start;
   width: min(100%, 250px);
   aspect-ratio: 0.82;
   padding: 7px;
@@ -682,7 +691,7 @@ h6 {
   margin: 38px 0 56px;
   padding: 28px 30px;
   border-left: 3px solid var(--accent);
-  background: #f1f3f5;
+  background: var(--accent-soft);
 }
 
 .principle-callout span {
@@ -697,14 +706,14 @@ h6 {
 
 .principle-callout p {
   margin: 0 0 4px !important;
-  color: #27315c !important;
+  color: var(--ink) !important;
   font-size: 1.4rem !important;
   font-weight: 660;
   letter-spacing: -0.025em;
 }
 
 .principle-callout small {
-  color: #5e6685;
+  color: var(--ink-soft);
 }
 
 .research-links {
@@ -717,9 +726,9 @@ h6 {
 .research-links a {
   display: inline-flex;
   padding: 8px 12px;
-  border: 1px solid #ccd4ef;
+  border: 1px solid #e2bfd0;
   border-radius: 7px;
-  background: #f1f4ff;
+  background: var(--accent-soft);
   font-size: 0.8rem;
   font-weight: 730;
   text-decoration: none;
@@ -941,6 +950,10 @@ h6 {
 /* Footer ------------------------------------------------------------------ */
 
 .page__footer {
+  position: static;
+  bottom: auto;
+  float: none;
+  width: 100%;
   margin: 0;
   border-top: 1px solid var(--line);
   background: var(--surface-soft);
@@ -985,7 +998,7 @@ h6 {
 
 @media (max-width: 1020px) {
   .home-hero {
-    grid-template-columns: minmax(0, 1fr) 235px;
+    grid-template-columns: 210px minmax(0, 1fr);
     gap: 40px;
     min-height: auto;
   }
@@ -1073,7 +1086,7 @@ h6 {
 
   .home-hero__portrait img {
     border-radius: 14px;
-    object-position: 50% 37%;
+    object-position: 50% 42%;
   }
 
   .home-hero h1 {
