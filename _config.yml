@@ -11,10 +11,11 @@ locale                   : "en-US"
 title                    : "Mathis Pink"
 title_separator          : "-"
 name                     : &name "Mathis Pink"
-description              : &description "PhD student in computer science at the Max Planck Institute for Software Systems"
+description              : &description "PhD candidate at MPI-SWS and Saarland University studying contextual and episodic memory across machine learning, cognitive science, and neuroscience."
 url                      : https://mathispink.com # custom domain
 baseurl                  : "" # the subpath of your site, e.g. "/blog"
 repository               : "mathispink/mathispink.github.io"
+theme                    : null # use the layouts/CSS in this repository; disable GitHub Pages' default Primer theme
 
 # Site Author - The following control what appear as part of the author content on the side bar.
 #               If a field is blank the icon and link will not appear, otherwise it will be shown.
@@ -24,8 +25,8 @@ author:
   avatar           : "profile.jpg"
   name             : "Mathis Pink"
   pronouns         : # example: "she/her"  
-  bio              : "PhD student in computer science @ MPI-SWS"
-  location         : "Saarbruecken, Germany"
+  bio              : "PhD candidate · memory · NeuroAI"
+  location         : "Saarbrücken, Germany"
   employer         : "MPI-SWS"
   uri              : # URL
   email            : "mpink@mpi-sws.org" 
@@ -120,23 +121,26 @@ yandex_site_verification :
 
 # Social Sharing
 twitter:
-  username               : &twitter
+  username               : MathisPink
 facebook:
   username               : #
   app_id                 : #
   publisher              : #
-og_image                 :  # Open Graph/Twitter default site image
+og_image                 : profile.jpg # Open Graph/Twitter default site image
 # For specifying social profiles
 # - https://developers.google.com/structured-data/customize/social-profiles
 social:
-  type                   : # Person or Organization (defaults to Person)
-  name                   : # If the user or organization name differs from the site's name
-  links: # An array of links to social media profiles
+  type                   : Person
+  name                   : Mathis Pink
+  links:
+    - https://github.com/mathispink
+    - https://bsky.app/profile/mathispink.bsky.social
+    - https://twitter.com/MathisPink
 
 
 # Analytics
 analytics:
-  provider               :  "google-universal" # false (default), "google", "google-universal", "google-analytics-4", "custom"
+  provider               : false # enable when a tracking ID is configured
   google:
     tracking_id          :
 
@@ -159,6 +163,12 @@ exclude:
   - Gruntfile.js
   - LICENSE
   - README
+  - README.md
+  - CONTRIBUTING.md
+  - SITE_NOTES.md
+  - markdown_generator
+  - talkmap.py
+  - talkmap.ipynb
   - Rakefile
   - assets/js/_main.js
   - assets/js/plugins
@@ -232,25 +242,25 @@ defaults:
       type: pages
     values:
       layout: single
-      author_profile: true
+      author_profile: false
   # _teaching
   - scope:
       path: ""
       type: teaching
     values:
       layout: single
-      author_profile: true
-      share: true
-      comments: true
+      author_profile: false
+      share: false
+      comments: false
   # _publications
   - scope:
       path: ""
       type: publications
     values:
       layout: single
-      author_profile: true
-      share: true
-      comments: true
+      author_profile: false
+      share: false
+      comments: false
   # _portfolio
   - scope:
       path: ""
@@ -280,7 +290,7 @@ sass:
 permalink: /:categories/:title/
 # paginate: 5 # amount of posts to show
 # paginate_path: /page:num/
-timezone: America/Los_Angeles # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
+timezone: Europe/Berlin # http://en.wikipedia.org/wiki/List_of_tz_database_time_zones
 
 
 # Plugins
@@ -297,6 +307,7 @@ whitelist:
   - jekyll-gist
   - jekyll-feed
   - jemoji
+  - jekyll-redirect-from
 
 
 # Archives

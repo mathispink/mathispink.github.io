@@ -1,0 +1,20 @@
+{% assign pub = include.post %}
+<article class="publication-card">
+  <div class="publication-card__topline">
+    <span class="publication-card__year">{{ pub.date | date: "%Y" }}</span>
+    {% if pub.venue_short %}<span class="publication-card__venue">{{ pub.venue_short }}</span>{% elsif pub.venue %}<span class="publication-card__venue">{{ pub.venue }}</span>{% endif %}
+    {% if pub.status %}<span class="publication-card__status">{{ pub.status }}</span>{% endif %}
+  </div>
+  <h2 class="publication-card__title">
+    <a href="{{ pub.paperurl | default: pub.url }}">{{ pub.title }}</a>
+  </h2>
+  {% if pub.authors_html %}<p class="publication-card__authors">{{ pub.authors_html }}</p>{% endif %}
+  {% if pub.summary %}<p class="publication-card__summary">{{ pub.summary }}</p>{% endif %}
+  <div class="publication-card__links">
+    {% if pub.paperurl %}<a href="{{ pub.paperurl }}">Paper</a>{% endif %}
+    {% if pub.openreview %}<a href="{{ pub.openreview }}">OpenReview</a>{% endif %}
+    {% if pub.codeurl %}<a href="{{ pub.codeurl }}">Code</a>{% endif %}
+    {% if pub.doi %}<a href="{{ pub.doi }}">DOI</a>{% endif %}
+    <a href="{{ pub.url }}">Bib / details</a>
+  </div>
+</article>

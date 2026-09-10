@@ -2,11 +2,22 @@
 layout: archive
 title: "Teaching"
 permalink: /teaching/
-author_profile: true
+author_profile: false
 ---
+
+<p class="page-intro">Teaching and course support in NeuroAI, computational neuroscience, reinforcement learning, computer vision, deep learning, and machine learning.</p>
 
 {% include base_path %}
 
+<div class="teaching-list">
 {% for post in site.teaching reversed %}
-  {% include archive-single.html %}
+  <article class="teaching-card">
+    <div class="teaching-card__year">{{ post.date | date: "%Y" }}</div>
+    <div>
+      <h2><a href="{{ post.url }}">{{ post.title }}</a></h2>
+      <p><strong>{{ post.type }}</strong> · {{ post.venue }}</p>
+      {% if post.excerpt %}<p class="teaching-card__detail">{{ post.excerpt | strip_html }}</p>{% endif %}
+    </div>
+  </article>
 {% endfor %}
+</div>

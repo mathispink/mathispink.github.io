@@ -2,15 +2,12 @@
 layout: archive
 title: "Publications"
 permalink: /publications/
-author_profile: true
+author_profile: false
 ---
 
-{% if site.author.googlescholar %}
-  <div class="wordwrap">You can also find my articles on <a href="{{site.author.googlescholar}}">my Google Scholar profile</a>.</div>
-{% endif %}
+<p class="page-intro">Peer-reviewed papers and preprints, with brief summaries of the main contribution.</p>
 
-{% include base_path %}
-
-{% for post in site.publications reversed %}
-  {% include archive-single.html %}
+{% assign pubs = site.publications | sort: "date" | reverse %}
+{% for post in pubs %}
+  {% include publication-card.html post=post %}
 {% endfor %}
