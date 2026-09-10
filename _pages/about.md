@@ -21,6 +21,7 @@ redirect_from:
       <a class="button button--primary" href="/research/">Research</a>
       <a class="button" href="/publications/">Publications</a>
       <a class="button button--quiet" href="/background/">Background</a>
+      <a class="button button--quiet" href="{{ base_path }}/cv/">CV</a>
     </div>
   </div>
   <div class="home-hero__portrait" aria-label="Portrait of Mathis Pink">

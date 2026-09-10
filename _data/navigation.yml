@@ -1,9 +1,11 @@
-main:
+    main:
   - title: "Research"
     url: /research/
   - title: "Publications"
     url: /publications/
   - title: "Background"
     url: /background/
+  - title: "CV"
+    url: /files/mathis-pink-cv.pdf
   - title: "Teaching"
     url: /teaching/

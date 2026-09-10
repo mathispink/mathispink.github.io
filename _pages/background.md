@@ -4,9 +4,12 @@ title: "Background"
 permalink: /background/
 author_profile: false
 redirect_from:
-  - /cv/
   - /resume
 ---
+
+<p class="background-note">
+  <a href="/files/mathis-pink-cv.pdf">Curriculum Vitae (PDF)</a>
+</p>
 
 <p class="page-intro">I am a PhD candidate in computer science at MPI-SWS and Saarland University, working at the intersection of machine learning, cognitive science, and computational neuroscience. I study contextual memory in artificial systems both as a capability and as a way to investigate general computational principles of memory.</p>
 
