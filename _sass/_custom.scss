@@ -103,13 +103,22 @@ h6 {
 .greedy-nav {
   display: flex;
   align-items: center;
-  justify-content: space-between;
   background: transparent;
 }
 
 .greedy-nav .visible-links {
   display: flex;
   align-items: center;
+  width: auto !important;
+  margin: 0;
+}
+
+.greedy-nav .visible-links li {
+  flex: 0 0 auto;
+}
+
+.masthead__menu-item--lg {
+  margin-right: 2rem;
 }
 
 .greedy-nav .visible-links a,
@@ -130,9 +139,6 @@ h6 {
   background: var(--accent);
 }
 
-.masthead__menu-item--lg {
-  margin-right: auto;
-}
 
 .masthead__menu-item--lg a {
   color: var(--ink) !important;
@@ -142,7 +148,26 @@ h6 {
 }
 
 .greedy-nav button {
-  background: transparent;
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border: 0;
+  border-radius: 8px;
+  background: #545861;
+  cursor: pointer;
+  transition: background 0.15s ease;
+}
+
+.greedy-nav button:hover,
+.greedy-nav button:focus-visible {
+  background: #3f434a;
+}
+
+.greedy-nav button .navicon,
+.greedy-nav button .navicon::before,
+.greedy-nav button .navicon::after {
+  background: #ffffff;
+  height: 2px;
 }
 
 .greedy-nav .hidden-links {
